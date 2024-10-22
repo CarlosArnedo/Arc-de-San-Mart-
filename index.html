@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Arc De Sant Marti</title>
+
+</head>
+<body>
+  
+  <h3 id="arcoiris">Arc de Sant Martí</h3>
+
+  <p class="SanMarti">roig, rojo, red</p>
+  <p class="SanMarti">taronja, naranja, orange</p>
+  <p class="SanMarti">groc, amarillo, yellow</p>
+  <p class="SanMarti">verd, verde, green</p>
+  <p class="SanMarti">blau clar,  azul claro, light blue</p>
+  <p class="SanMarti">blau, azul, blue</p>
+  <p class="SanMarti">morat,  morado, purple</p>
+<p> </p>
+
+<script>
+const rainbowColors = ['red','orange','yellow','green','blue','indigo','violet'];
+  document.querySelectorAll('.SanMarti').forEach((paragraph, index) => {
+    paragraph.addEventListener('mouseover', () => {
+      paragraph.style.color = rainbowColors[index % rainbowColors.length];
+    });
+    paragraph.addEventListener('mouseout', () => {
+      paragraph.style.color = 'black';
+    });
+  });
+
+    
+  document.getElementById('arcoiris').addEventListener('click', () => {
+    document.querySelectorAll('.SanMarti').forEach((paragraph, index) => {
+      paragraph.style.color = rainbowColors[index % rainbowColors.length];
+    });
+  });
+</script>
+</body>
+</html>
